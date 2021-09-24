@@ -1,0 +1,334 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+
+body {
+  background: rgba(176, 0, 2, 0.8);
+}
+
+.baymax {
+  margin-top: 50px;
+  width: 400px;
+  position: relative;
+  /*border: 1px solid #fff;*/
+}
+
+h4 {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+  color: #fff;
+  font-family: Arial, Helvetica, Verdana;
+  font-size: 1.5em;
+}
+
+h5 {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  color: #fff;
+  font-family: Arial, Helvetica, Verdana;
+  font-size: 1.5em;
+}
+
+}
+
+/*******************************
+          HEADER
+********************************/
+@-webkit-keyframes pisca {
+  0% {
+    height: 18px;
+  }
+  15% {
+    height: 3px;
+    top: 58px;
+  }
+  30% {
+    height: 18px;
+    top: 50px;
+  }
+}
+@-webkit-keyframes turn-head {
+  0% {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(0);
+  }
+}
+header {
+  border: 1px solid #333;
+  z-index: 9999;
+  width: 130px;
+  height: 100px;
+  background: -webkit-linear-gradient(#fff 55%, #DDD);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 5px 20px #777;
+  -webkit-animation: turn-head 7s infinite;
+}
+header span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #000;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-animation: pisca 4s infinite;
+}
+header span:nth-child(1) {
+  top: 50px;
+  left: 22px;
+}
+header span:nth-child(2) {
+  top: 50px;
+  right: 22px;
+}
+header:after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  top: 58px;
+  left: 30px;
+}
+
+/*******************************
+          SECTION
+********************************/
+section {
+  box-shadow: inset -20px -10px 40px #DDD, inset 3px 3px 5px #FFF;
+  background: -webkit-radial-gradient(50% 10%, closest-corner, #DDD, #fff);
+  width: 300px;
+  height: 450px;
+  border-radius: 70% 70% 55% 55%;
+  z-index: 1;
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  /*box-shadow: 0 1px 5px #777;*/
+  border: 1px solid #333;
+}
+section:before {
+  z-index: 1;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  background: #ddd;
+}
+
+/*******************************
+          ASIDE
+********************************/
+@-webkit-keyframes hello {
+  0% {
+    transform: rotate(0deg) translate(10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) translate(10px) rotate(360deg);
+  }
+}
+aside {
+  border: 1px solid #333;
+  background: -webkit-radial-gradient(circle, #ddd, #fff);
+  position: absolute;
+}
+aside:nth-of-type(1) {
+  border-radius: 50% 10px 50% 50%;
+  z-index: 0;
+  width: 150px;
+  height: 200px;
+  top: 100px;
+  left: 50px;
+  transform: rotate(20deg);
+}
+aside:nth-of-type(2) {
+  z-index: 9999;
+  width: 120px;
+  height: 200px;
+  top: 130px;
+  left: -45px;
+  border-radius: 25% 60% 50% 50%;
+  -webkit-animationd: hello 3s infinite;
+}
+aside:nth-of-type(2):after {
+  content: "";
+  display: block;
+  z-index: -6;
+  position: absolute;
+  top: 22px;
+  left: 12px;
+  width: 75px;
+  height: 15px;
+  border: 1px solid #000;
+  border-bottom: none;
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+aside:nth-of-type(2):before {
+  content: "";
+  display: block;
+  z-index: -6;
+  position: absolute;
+  top: 80px;
+  left: 15px;
+  width: 70px;
+  height: 25px;
+  box-shadow: 0 2px 1px #AAA;
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+aside:nth-of-type(2) li {
+  display: block;
+  position: absolute;
+  width: 30px;
+  z-index: -1;
+  background: linear-gradient(to bottom, #FFF, #ddd);
+  border-radius: 44% 44% 0 0;
+  border: 1px solid #333;
+  border-bottom: none;
+}
+aside:nth-of-type(2) li:nth-child(1) {
+  height: 37px;
+  top: -13px;
+  left: 1px;
+}
+aside:nth-of-type(2) li:nth-child(2) {
+  height: 38px;
+  top: -26px;
+  left: 32px;
+}
+aside:nth-of-type(2) li:nth-child(3) {
+  transform: rotate(-5deg);
+  height: 40px;
+  top: -27px;
+  left: 64px;
+}
+aside:nth-of-type(2) li:nth-child(4) {
+  height: 40px;
+  width: 30px;
+  top: 5px;
+  left: 85px;
+  border-radius: 20px 20px 5px 50%;
+}
+aside:nth-of-type(2) li:nth-child(5) {
+  background: radial-gradient(to bottom, #ddd, #fff);
+  z-index: -5;
+  height: 50px;
+  width: 50px;
+  top: 25px;
+  left: 67px;
+  border: 1px solid #999;
+  border-radius: 20px 20px 5px 50%;
+}
+aside:nth-of-type(3) {
+  border-radius: 10px 50% 40% 50%;
+  z-index: 0;
+  width: 150px;
+  height: 370px;
+  top: 100px;
+  right: 0;
+  transform: rotate(-20deg);
+}
+aside:nth-of-type(3) li {
+  display: block;
+  position: absolute;
+  width: 30px;
+  z-index: -1;
+  background: linear-gradient(to bottom, #fff, #ddd);
+  border: 1px solid #333;
+  border-top: none;
+}
+aside:nth-of-type(3) li:nth-child(1) {
+  border-radius: 10px 70% 44% 44%;
+  height: 35px;
+  bottom: -10px;
+  left: 25px;
+  transform: rotate(25deg);
+}
+aside:nth-of-type(3) li:nth-child(2) {
+  border-radius: 70% 0px 48% 48%;
+  height: 50px;
+  bottom: -39px;
+  left: 52px;
+  transform: rotate(30deg);
+}
+
+/*******************************
+          FOOTER
+********************************/
+footer {
+  z-index: -1;
+  width: 220px;
+  height: 200px;
+  position: absolute;
+  top: 445px;
+  left: 94px;
+}
+footer p {
+  border: 1px solid #333;
+  display: block;
+  overflow: hidden;
+  width: 107px;
+  height: 200px;
+  position: absolute;
+}
+footer p span.leg {
+  display: block;
+  width: 50px;
+  height: 100px;
+  position: absolute;
+  background: #ddd;
+  border: 1px solid #333;
+}
+footer p span.foot {
+  display: block;
+  width: 100px;
+  height: 25px;
+  position: absolute;
+  background: #ddd;
+  border: 1px solid #333;
+}
+footer p:first-child {
+  background: -webkit-radial-gradient(30% 50%, closest-corner, #fff, #ddd);
+  left: 2px;
+  border-radius: 50px 0 20px 55%;
+}
+footer p:first-child span.leg {
+  top: 30px;
+  left: -20px;
+  border-radius: 50%;
+}
+footer p:first-child span.foot {
+  bottom: 0;
+  left: 10px;
+  border-radius: 30px;
+}
+footer p:last-child {
+  right: 2px;
+  border-radius: 0 50px 55% 20px;
+  background: -webkit-radial-gradient(30% 50%, closest-corner, #fff, #ddd);
+}
+footer p:last-child span.leg {
+  top: 30px;
+  right: -20px;
+  border-radius: 50%;
+}
+footer p:last-child span.foot {
+  bottom: 0;
+  right: 10px;
+  border-radius: 30px;
+}
